@@ -1,0 +1,84 @@
+npm install formik yup
+npm install react-router-dom
+npm install @mui/material @mui/icons-material
+npm install node-sass
+------------------------------
+Errors : 
+Module not found: Error: Can't resolve '@emotion/react' in 
+'C:\Users\hp\Desktop\Mohini\React\reactpr2sept23\crudapplication\node_modules\@mui\styled-engine\GlobalStyles'
+solution : npm install @emotion/react @emotion/styled
+--------------------------------
+npm install -g json-server
+-----------------------
+json-server --watch db.json --port 3001
+-------------------------------------
+npm install redux react-redux redux-thunk
+--------------------------
+===================================
+useEffect=>
+In React.js, the useEffect hook is used for handling side effects in functional components.
+ Side effects can include data fetching, DOM manipulation, subscriptions, and more. 
+
+Subscription=>a "subscription" typically refers to a
+ mechanism that allows one part of a program or system to receive 
+ updates or notifications when events or 
+data changes occur in another part of the program or system. 
+--------------------------
+npm install axios
+---------------------
+npm install @mui/material @mui/icons-material
+----------------------
+
+npm install @mui/material@^5.0.0
+
+------------------
+===========================================
+error
+npm ERR! Could not resolve dependency:
+npm ERR! peer react@"^17.0.2" from @mui/material@5.0.0
+npm ERR! node_modules/@mui/material
+npm ERR!   @mui/material@"5.0.0" from the root project
+npm ERR!
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force, or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR!
+npm ERR! See C:\Users\hp\AppData\Local\npm-cache\eresolve-report.txt for a full report.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\hp\AppData\Local\npm-cache\_logs\2023-09-07T09_02_17_393Z-debug-0.log
+ChatGPT
+The error message you're encountering is related to a dependency conflict in your project. The @mui/material@5.0.0 package has a peer dependency on react version ^17.0.2, but it seems that your project might have a different version of react installed.
+
+To resolve this issue, you have a few options:
+
+Upgrade React: You can try upgrading your project's React version to match the peer dependency required by @mui/material@5.0.0. To upgrade React, you can run the following command:
+
+bash
+Copy code
+npm install react@^17.0.2 react-dom@^17.0.2
+This will update React and React DOM to the required versions. After that, you can try installing @mui/material again.
+
+Use --force or --legacy-peer-deps: If you're sure that the version of React you have installed is compatible with @mui/material@5.0.0, you can try using the --force or --legacy-peer-deps flag when installing the package. However, be cautious when using these flags, as they might lead to compatibility issues:
+
+bash
+Copy code
+npm install @mui/material@5.0.0 --force
+# or
+npm install @mui/material@5.0.0 --legacy-peer-deps
+Using these flags should be a last resort if you're certain that your dependencies are compatible.
+
+Check and Update Other Dependencies: It's possible that other dependencies in your project are causing conflicts. You can review your project's package.json file and update any conflicting dependencies to versions that are compatible with both React and @mui/material@5.0.0.
+
+Use Yarn: If you're using npm and encounter dependency resolution issues, you can also consider using Yarn as your package manager, as it may handle dependency resolution differently.
+
+Once you've resolved the dependency conflict, you should be able to install
+ and use @mui/material@5.0.0 in your project without issues.
+
+
+
+
+
+
+npm install @mui/material@5.0.0 --force
+
